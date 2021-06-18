@@ -1,5 +1,5 @@
 {% set name = "rio-color" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3937a3f6360b42a9f752ab5ea6bf3039cd3c060c2f6d154fc7ee6085672197c
+  sha256: 5d74a68e949f87849d6147267c28e453dc4391eddf1511db6169e0011a68f258
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - color=rio_color.scripts.cli:color
     - atmos=rio_color.scripts.cli:atmos
