@@ -11,7 +11,7 @@ source:
   sha256: d3937a3f6360b42a9f752ab5ea6bf3039cd3c060c2f6d154fc7ee6085672197c
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - color=rio_color.scripts.cli:color
     - atmos=rio_color.scripts.cli:atmos
