@@ -11,7 +11,7 @@ source:
   sha256: 8512ef2cd8bef8a8f891011044e1cc6eafd7200f858630bd441de1e7b7dac096
 
 build:
-  number: 2
+  number: 3
   entry_points:
     - color=rio_color.scripts.cli:color
     - atmos=rio_color.scripts.cli:atmos
@@ -24,6 +24,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - numpy
@@ -35,7 +36,6 @@ requirements:
     - python
     - rasterio ~=1.0
     - rio-mucho
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
