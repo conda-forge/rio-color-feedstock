@@ -11,7 +11,7 @@ source:
   sha256: 8512ef2cd8bef8a8f891011044e1cc6eafd7200f858630bd441de1e7b7dac096
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - color=rio_color.scripts.cli:color
     - atmos=rio_color.scripts.cli:atmos
@@ -30,7 +30,7 @@ requirements:
     - pip
     - python
   run:
-    - click >=4.0,<8
+    - click >=4.0
     - enum34  # [py<34]
     - python
     - rasterio ~=1.0
