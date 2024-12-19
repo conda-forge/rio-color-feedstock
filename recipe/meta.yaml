@@ -1,5 +1,5 @@
 {% set name = "rio-color" %}
-{% set version = "1.0.4" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8512ef2cd8bef8a8f891011044e1cc6eafd7200f858630bd441de1e7b7dac096
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6fee1e97669979ecac670c0ac9cf66a49db485e7259f967116ebb171b18892ed
 
 build:
-  number: 4
+  number: 0
   entry_points:
     - color=rio_color.scripts.cli:color
     - atmos=rio_color.scripts.cli:atmos
@@ -31,10 +31,10 @@ requirements:
     - pip
     - python
   run:
-    - click >=4.0
+    - click >=8.0
     - enum34  # [py<34]
     - python
-    - rasterio ~=1.0
+    - rasterio >=1.4,<2.dev0
     - rio-mucho
 
 test:
