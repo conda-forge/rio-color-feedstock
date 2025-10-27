@@ -30,6 +30,7 @@ requirements:
     - numpy
     - pip
     - python
+    - setuptools
   run:
     - click >=4.0
     - enum34  # [py<34]
